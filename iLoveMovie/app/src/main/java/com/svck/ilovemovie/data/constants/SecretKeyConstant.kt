@@ -1,0 +1,5 @@
+package com.svck.ilovemovie.data.constants
+
+object SecretKeyConstant {
+    const val API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYmQ2MDQxNmZjZDAyZDU0YmRjMzQ3NmMxZjkwNGZjMyIsInN1YiI6IjVmOTg4NGJlNDM5OTliMDAzNWZhYTc0MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kNa5fwS6K_PEkYUvjNIcitF38nLOY3ffHPeNRUVvWy0"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">iLoveMovie</string>
+    <string name="welcome_to_tmdb">Welcome to TMDB</string>
+    <string name="error_processing_your_request_please_check_your_connection_try_again">Error processing your request, please check your connection/try again.</string>
+</resources>

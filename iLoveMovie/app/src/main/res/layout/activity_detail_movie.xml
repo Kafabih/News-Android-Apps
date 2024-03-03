@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl.poster"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv.poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/movie_poster"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/bannerLoading"
+                    layout="@layout/layout_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ib.trailer"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_play_circle_large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll.info.movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_20"
+                app:layout_constraintTop_toBottomOf="@id/cl.poster">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl.movie"
+                    android:layout_width="@dimen/space_100"
+                    android:layout_height="200dp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/iv.movie"
+                        android:layout_width="@dimen/space_100"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/movie_poster"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <include
+                        android:id="@+id/bannerLoading.movie"
+                        layout="@layout/layout_loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/space_10">
+
+                    <TextView
+                        android:id="@+id/tv.title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:text="Driver"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv.rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_star"
+                        android:drawableTint="@color/tertiary"
+                        android:gravity="center|start"
+                        android:text="7.5 ( 7000 )"
+                        android:textColor="@color/tertiary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv.genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:orientation="horizontal"
+                        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/item_genre" />
+
+                    <TextView
+                        android:id="@+id/tv.desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:text="lorem ipsum dolor sit amet"
+                        android:textColor="@color/gray_8a8a8a" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/space_20"
+                app:layout_constraintTop_toBottomOf="@id/ll.info.movie">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="User Review"
+                    android:textColor="@color/white" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv.review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    tools:listitem="@layout/item_review" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/layoutLoading"
+        layout="@layout/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/no_space"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
