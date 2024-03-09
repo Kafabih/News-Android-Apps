@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ILoveMovie" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+    <style name="Theme.News" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary</item>
@@ -46,20 +46,20 @@
         <item name="android:windowMinWidthMinor">90%</item>
     </style>
 
-    <style name="Theme.ILoveMovie.Fullscreen" parent="Theme.ILoveMovie">
+    <style name="Theme.News.Fullscreen" parent="Theme.News">
         <item name="android:actionBarStyle">
-            @style/Widget.Theme.ILoveMovie.ActionBar.Fullscreen
+            @style/Widget.Theme.News.ActionBar.Fullscreen
         </item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:windowBackground">@null</item>
     </style>
 
-    <style name="ThemeOverlay.ILoveMovie.FullscreenContainer" parent="">
+    <style name="ThemeOverlay.News.FullscreenContainer" parent="">
         <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
         <item name="fullscreenTextColor">@color/light_blue_A200</item>
     </style>
 
-    <style name="Theme.ILoveMovie.NoActionBar">
+    <style name="Theme.News.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

@@ -46,6 +46,7 @@
     <color name="transparent">#00000000</color>
 
     <color name="red">#FF1515</color>
+    <color name="red_darker">#9B0D0D</color>
     <color name="success">#00A07A</color>
     <color name="success_lighter">#D4FFDE</color>
     <color name="danger_lighter">#FFEFF6</color>

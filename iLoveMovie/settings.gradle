@@ -1,2 +1,2 @@
-rootProject.name = "iLoveMovie"
+rootProject.name = "NewsApp"
 include ':app', ':android-viewbinding'
